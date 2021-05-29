@@ -1,8 +1,12 @@
-import "./App.css";
 import Editor from "./organisms/Editor";
+import { StyledAppContainer } from "./styles";
 
 function App() {
-  return <Editor />;
+  return (
+    <StyledAppContainer>
+      <Editor />
+    </StyledAppContainer>
+  );
 }
 
 export default App;
