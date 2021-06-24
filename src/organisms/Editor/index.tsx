@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { GraphView, IEdge, INode } from "react-digraph";
 import constants from "../../constants";
 import {
@@ -144,6 +145,11 @@ const sample: IGraph = {
 
 export default function Editor() {
   const { NodeTypes, NodeSubtypes, EdgeTypes } = GraphConfig;
+
+  useEffect(() => {
+    // TODO: Get the graph on first run
+  });
+
   return (
     <GraphView
       edges={sample.edges}
@@ -152,6 +158,7 @@ export default function Editor() {
       edgeTypes={EdgeTypes}
       nodeSubtypes={NodeSubtypes}
       nodeTypes={NodeTypes}
+      gridSize={700}
     />
   );
 }
