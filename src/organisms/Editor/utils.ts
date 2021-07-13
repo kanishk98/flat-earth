@@ -1,1 +1,1 @@
-export function convertNodes() {}
+export function convertNodes(graph: any) {}
